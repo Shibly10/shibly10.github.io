@@ -6,9 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<div style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 1000;">
-  <img src="/images/robot.png" alt="Robot" style="max-width: 200px;">
-</div>
+<img src="/images/robot.png" alt="Robot" style="float: right; margin: 0 0 20px 20px; max-width: 300px;">
 
 I'm Shibly, a Software Engineer at [Bengal Mobile QA Solution](https://www.bengalmobileqa.com/) with a passion for continuous learning and growth. I'm highly motivated and always set ambitious goals, working diligently to achieve them. I thrive in collaborative environments and am willing to push beyond my limits to accomplish meaningful work.
 
