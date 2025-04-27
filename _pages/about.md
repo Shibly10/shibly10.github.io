@@ -6,7 +6,9 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<img src="/images/robot.png" alt="Robot" style="float: right; margin: 0 0 20px 20px; max-width: 300px;">
+<div style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 1000;">
+  <img src="/images/robot.png" alt="Robot" style="max-width: 200px;">
+</div>
 
 I'm Shibly, a Software Engineer at [Bengal Mobile QA Solution](https://www.bengalmobileqa.com/) with a passion for continuous learning and growth. I'm highly motivated and always set ambitious goals, working diligently to achieve them. I thrive in collaborative environments and am willing to push beyond my limits to accomplish meaningful work.
 
@@ -20,6 +22,7 @@ In my free time, I enjoy playing football and video games, keeping a balanced li
 ---
 
 **Software Engineer**
+
 *Bengal Mobile QA Solution* — *March 2025 - Present* 
 - Developing an AI-powered parser (AIRuler) to structure raw CDRs based on dynamic rules, improving data processing efficiency.
 - Working on a chatbot using LLMs for hotel interactions, enhancing customer service automation.
@@ -34,7 +37,7 @@ In my free time, I enjoy playing football and video games, keeping a balanced li
 - Continuously learning and applying the latest technologies to solve complex challenges.
 
 **Consultant**  
-*Bengal Mobile QA* — *December 2023 - Present*  
+*Bengal Mobile QA* — *December 2023 - July 2024*  
 - Leading the conversion of cutting-edge technologies into viable products, with a particular focus on leveraging Large Language Models (LLMs) for chatbot development.  
 - Driving innovation through the integration of AI-driven tools and methodologies to enhance user experiences.
 
