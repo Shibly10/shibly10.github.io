@@ -171,6 +171,72 @@ redirect_from:
   line-height: 1.6;
 }
 
+.ielts-section {
+  background: #f8f9fa;
+  padding: 2em;
+  border-radius: 10px;
+  border-left: 4px solid #27ae60;
+  margin: 2em 0;
+}
+
+.ielts-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1.5em;
+  font-size: 1.3em;
+}
+
+.ielts-container {
+  overflow-x: auto;
+}
+
+.ielts-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.ielts-table th {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: white;
+  padding: 1em;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.ielts-table td {
+  padding: 1em;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: 500;
+}
+
+.test-name {
+  font-weight: bold;
+  color: #2c3e50;
+  background: #ecf0f1;
+}
+
+.overall-score {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #27ae60;
+  background: #d5f4e6;
+}
+
+.skill-score {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.test-date {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
 @media (max-width: 768px) {
   .hero-section {
     flex-direction: column;
@@ -225,6 +291,36 @@ redirect_from:
     <p>
       As an aspiring researcher, I enjoy exploring how technology can shape the way humans interact with systems in more intuitive and effective ways. In my free time, I enjoy playing football and video games, keeping a balanced life between work, study, and recreation.
     </p>
+  </div>
+
+  <div class="ielts-section">
+    <h3>🏆 Test Scores</h3>
+    <div class="ielts-container">
+      <table class="ielts-table">
+        <thead>
+          <tr>
+            <th>Test</th>
+            <th>Overall</th>
+            <th>Reading</th>
+            <th>Listening</th>
+            <th>Speaking</th>
+            <th>Writing</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="test-name">IELTS</td>
+            <td class="overall-score">8.0</td>
+            <td class="skill-score">9.0</td>
+            <td class="skill-score">8.0</td>
+            <td class="skill-score">8.0</td>
+            <td class="skill-score">6.5</td>
+            <td class="test-date">August 2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <div class="experience-section">

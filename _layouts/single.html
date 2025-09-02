@@ -45,29 +45,31 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
-        {% if page.citation and page.paperurl and page.slidesurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.citation and page.paperurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a></p>
-        {% elsif page.citation and page.slidesurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.citation %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
-        {% elsif page.slidesurl %}
-          <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a></p>
+        {% if page.citation %}
+          <div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px; border-left: 4px solid #3498db; margin: 2em 0;">
+            <h4 style="color: #2c3e50; margin-bottom: 1em;">📄 Citation</h4>
+            <p style="font-size: 0.9em; line-height: 1.6; color: #2c3e50;">{{ page.citation }}</p>
+            <div style="margin-top: 1.5em;">
+              {% if page.paperurl %}
+                <a href="{{ page.paperurl }}" class="btn btn--primary" style="background: #3498db; margin-right: 1em; margin-bottom: 0.5em;" target="_blank">
+                  📖 Download Paper
+                </a>
+              {% endif %}
+              {% if page.preprinturl %}
+                <a href="{{ page.preprinturl }}" class="btn btn--info" style="background: #e74c3c; margin-right: 1em; margin-bottom: 0.5em;" target="_blank">
+                  📄 ArXiv Preprint
+                </a>
+              {% endif %}
+            </div>
+          </div>
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
       <footer class="page__meta">
-        {% if site.data.ui-text[site.locale].meta_label %}
-          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
-        {% endif %}
-        {% include page__taxonomy.html %}
+        <!-- Categories and social sharing removed for cleaner publication pages -->
       </footer>
-
-      {% if page.share %}{% include social-share.html %}{% endif %}
 
       {% include post_pagination.html %}
     </div>

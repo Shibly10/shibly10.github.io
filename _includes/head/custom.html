@@ -11,7 +11,7 @@
 
 .author__avatar img {
   max-width: 150px;
-  border-radius: 50% !important;
+  border-radius: 25% !important;
   border: 4px solid #3498db;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -54,12 +54,47 @@
   padding: 0.2em 0 !important;
 }
 
-/* Fix institution name wrapping */
+/* Fix institution name wrapping and sidebar scrolling */
 .author__urls .author__desktop {
   display: block !important;
   white-space: normal !important;
   word-break: break-word !important;
   hyphens: auto !important;
+}
+
+/* Fix sidebar scrolling issues */
+.sidebar {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+@media screen and (min-width: 64em) {
+  .sidebar {
+    height: auto !important;
+    overflow: visible !important;
+    position: static !important;
+  }
+}
+
+/* Ensure all social icons are visible */
+.author__urls {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Fix Google Scholar icon specifically */
+.author__urls a[href*="scholar.google"] i:before {
+  content: "\f19d" !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900 !important;
+}
+
+/* Alternative Google Scholar icon fix */
+.author__urls a[href*="scholar.google"]:before {
+  content: "🎓";
+  font-size: 1.2em;
+  margin-right: 0.5em;
 }
 
 /* Enhanced button styling */

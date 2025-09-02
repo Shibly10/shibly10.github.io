@@ -1,13 +1,12 @@
 ---
 title: "Leveraging the Domain Adaptation of Retrieval Augmented Generation Models for Question Answering and for Hallucination Reduction"
 collection: publications
-category: conferences
 permalink: /publication/2025-05-09-rag-domain-adaptation
 excerpt: 'This paper investigates the performance of diverse RAG and RAG-like architectures through domain adaptation and evaluates their ability to generate accurate and relevant responses grounded in contextual knowledge base, with a focus on reducing hallucinations in specialized domains such as customer service.'
 date: 2025-05-09
 venue: 'The 22nd International Conference on Information Technology-New Generations (ITNG 2025)'
 paperurl: 'https://link.springer.com/chapter/10.1007/978-3-031-89063-5_42'
-slidesurl: ''
+preprinturl: 'https://arxiv.org/pdf/2410.17783'
 citation: 'Rakin, S., Shibly, M.A.R., Hossain, Z.M., Akbar, M.M., Khan, Z. (2025). Leveraging the Domain Adaptation of Retrieval Augmented Generation Models for Question Answering and for Hallucination Reduction. In: Latifi, S. (eds) The 22nd International Conference on Information Technology-New Generations (ITNG 2025). ITNG 2025. Advances in Intelligent Systems and Computing, vol 1463. Springer, Cham.'
 ---
 
