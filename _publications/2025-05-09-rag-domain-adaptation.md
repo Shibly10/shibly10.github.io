@@ -1,6 +1,7 @@
 ---
 title: "Leveraging the Domain Adaptation of Retrieval Augmented Generation Models for Question Answering and for Hallucination Reduction"
 collection: publications
+category: conferences
 permalink: /publication/2025-05-09-rag-domain-adaptation
 excerpt: 'This paper investigates the performance of diverse RAG and RAG-like architectures through domain adaptation and evaluates their ability to generate accurate and relevant responses grounded in contextual knowledge base, with a focus on reducing hallucinations in specialized domains such as customer service.'
 date: 2025-05-09
