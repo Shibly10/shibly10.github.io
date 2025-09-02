@@ -17,6 +17,11 @@ redirect_from:
 /* Restore theme defaults for layout containers to prevent overflow and right-side whitespace */
 /* Intentionally do not override .page__content, .page__inner-wrap, #main, or article widths */
 
+/* Remove right gutter reserved for an unused right sidebar on large screens */
+@media screen and (min-width: 64em) {
+  .page { margin-right: 0 !important; }
+}
+
 .hero-section {
   display: flex;
   align-items: center;
