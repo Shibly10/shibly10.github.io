@@ -6,39 +6,273 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<img src="/images/robot.png" alt="Robot" style="float: right; margin: 0 0 20px 20px; max-width: 300px;">
 
-I'm Shibly, a Software Engineer at [Bengal Mobile QA Solution](https://www.bengalmobileqa.com/) with a passion for continuous learning and growth. I'm highly motivated and always set ambitious goals, working diligently to achieve them. I thrive in collaborative environments and am willing to push beyond my limits to accomplish meaningful work.
+<style>
+.about-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
 
-As an aspiring researcher, my key interests lie in Deep Learning, Natural Language Processing (NLP), and Human-Computer Interaction. I enjoy exploring how technology can shape the way humans interact with systems in more intuitive and effective ways.
+.hero-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5em;
+  flex-wrap: wrap;
+}
 
-In my free time, I enjoy playing football and video games, keeping a balanced life between work, study, and recreation.
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
 
+.hero-image {
+  flex-shrink: 0;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
 
+.hero-image img {
+  max-width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
 
-**Experience**  
----
+.hero-image img:hover {
+  transform: scale(1.02);
+}
 
-**Software Engineer**
+.intro-text {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #2c3e50;
+  margin-bottom: 1.5em;
+}
 
-*Bengal Mobile QA Solution* — *March 2025 - Present* 
-- Developing an AI-powered parser (AIRuler) to structure raw CDRs based on dynamic rules, improving data processing efficiency.
-- Working on a chatbot using LLMs for hotel interactions, enhancing customer service automation.
-- Working to modernize a hotel management system with a microservices-based architecture, improving scalability and maintainability.
+.research-interests {
+  background: #f8f9fa;
+  padding: 1.5em;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+  margin: 2em 0;
+}
 
-**Assitant Software Engineer**  
-*Computer Network Systems* — *June 2023 - February 2025*  
-- Contributed to internal system, CBMS, using Java Spring Boot and Oracle.
-- Led development of ML models for the government project BISDP-BI, focusing on data analysis and machine learning implementation.
-- Worked on a Business Intelligence project, developing machine learning models for insurance companies to optimize risk assessment and decision-making processes.
-- Contributed to the development of an AI-powered system to streamline the hiring process, automating candidate evaluation and shortlisting.
-- Continuously learning and applying the latest technologies to solve complex challenges.
+.research-interests h3 {
+  color: #2c3e50;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
 
-**Consultant**  
-*Bengal Mobile QA* — *December 2023 - July 2024*  
-- Leading the conversion of cutting-edge technologies into viable products, with a particular focus on leveraging Large Language Models (LLMs) for chatbot development.  
-- Driving innovation through the integration of AI-driven tools and methodologies to enhance user experiences.
+.interests-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5em;
+  list-style: none;
+  padding: 0;
+}
 
+.interests-list li {
+  background: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  font-weight: 500;
+  color: #2c3e50;
+}
 
+.experience-section {
+  margin-top: 3em;
+}
 
+.experience-section h2 {
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.5em;
+  margin-bottom: 2em;
+  font-size: 1.8em;
+}
 
+.job-item {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 2em;
+  margin-bottom: 2em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+}
+
+.job-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.job-duration {
+  color: #7f8c8d;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.job-company {
+  color: #3498db;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.job-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.job-description li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.8em;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
+.job-description li:before {
+  content: "▶";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.personal-note {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5em;
+  border-radius: 10px;
+  margin: 2em 0;
+  text-align: center;
+}
+
+.personal-note p {
+  margin: 0;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+  }
+  
+  .hero-image {
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .hero-image img {
+    max-width: 220px;
+  }
+  
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .job-duration {
+    margin-top: 0.5em;
+  }
+}
+</style>
+
+<div class="about-container">
+  <div class="hero-section">
+    <div class="hero-text">
+      <div class="intro-text">
+        I'm <strong>Shibly</strong>, a Software Engineer at <a href="https://www.bengalmobileqa.com/" target="_blank">Bengal Mobile QA Solution</a> with a passion for continuous learning and growth. I'm highly motivated and always set ambitious goals, working diligently to achieve them. I thrive in collaborative environments and am willing to push beyond my limits to accomplish meaningful work.
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/images/robot.png" alt="AI & Technology Illustration">
+    </div>
+  </div>
+
+  <div class="research-interests">
+    <h3>🔬 Research Interests</h3>
+    <ul class="interests-list">
+      <li>🤖 Applied AI across interdisciplinary domains</li>
+      <li>🔤 Natural Language Processing (NLP)</li>
+      <li>📚 Retrieval Augmented Generation (RAG)</li>
+      <li>💻 Human-Computer Interaction (HCI)</li>
+      <li>💬 Conversational AI</li>
+      <li>⚙️ Software Engineering</li>
+      <li>🎯 Hallucination Reduction in AI Agents</li>
+    </ul>
+  </div>
+
+  <div class="personal-note">
+    <p>
+      As an aspiring researcher, I enjoy exploring how technology can shape the way humans interact with systems in more intuitive and effective ways. In my free time, I enjoy playing football and video games, keeping a balanced life between work, study, and recreation.
+    </p>
+  </div>
+
+  <div class="experience-section">
+    <h2>💼 Professional Experience</h2>
+
+    <div class="job-item">
+      <div class="job-header">
+        <h3 class="job-title">Software Engineer</h3>
+        <span class="job-duration">March 2025 - Present</span>
+      </div>
+      <div class="job-company">Bengal Mobile QA Solutions</div>
+      <div class="job-description">
+        <ul>
+          <li>Developed AI-powered systems, including AI Ruler, a dynamic parser for structuring raw CDRs</li>
+          <li>Built chatbots and personalized AI assistants using LLMs for hotel interactions and parent-focused applications</li>
+          <li>Led development of Invoice-Factory-AI, applying prompt engineering to extract structured data from invoices</li>
+          <li>Modernized hotel management system with microservices-based architecture for scalability and maintainability</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job-item">
+      <div class="job-header">
+        <h3 class="job-title">Assistant Software Engineer</h3>
+        <span class="job-duration">July 2024 - February 2025</span>
+      </div>
+      <div class="job-company">Computer Network Systems</div>
+      <div class="job-description">
+        <ul>
+          <li>Co-led government insurance project BISDP-BI, overseeing data analysis and ML model development for intelligent decision-making and automation</li>
+          <li>Collaborated on AI-driven projects including Aptitudo and Zeuxis.AI, contributing to model development and data analysis</li>
+          <li>Worked with cross-functional teams to design, test, and integrate AI/ML components into production-level solutions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job-item">
+      <div class="job-header">
+        <h3 class="job-title">Consultant</h3>
+        <span class="job-duration">December 2023 - July 2024</span>
+      </div>
+      <div class="job-company">Bengal Mobile QA Solutions</div>
+      <div class="job-description">
+        <ul>
+          <li>Developed AI assistant for hotel industry using LLMs, focusing on conversational AI solutions tailored for hotel-specific tasks</li>
+          <li>Applied expertise in LLM-based systems for creating specialized industry applications</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

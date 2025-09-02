@@ -1,36 +1,159 @@
 ---
 layout: archive
-title: "Publications"
+title: "Research"
 permalink: /publications/
 author_profile: true
 ---
 
+<style>
+.research-section {
+  margin-bottom: 3em;
+}
+
+.research-section h2 {
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.ongoing-research-item {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.research-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 0.5em;
+}
+
+.research-duration {
+  color: #7f8c8d;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.research-tools {
+  color: #3498db;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+.research-description {
+  color: #2c3e50;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.supervisor-link {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.supervisor-link:hover {
+  text-decoration: underline;
+}
+
+.publication-item {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.google-scholar-link {
+  background: #4285f4;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1.5em;
+  font-weight: 500;
+}
+
+.google-scholar-link:hover {
+  background: #3367d6;
+  color: white;
+  text-decoration: none;
+}
+</style>
+
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">
+    <a href="{{site.author.googlescholar}}" class="google-scholar-link">
+      📚 View my Google Scholar profile
+    </a>
+  </div>
 {% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+<div class="research-section">
+  <h2>🔬 Ongoing Research</h2>
+  
+  <div class="ongoing-research-item">
+    <div class="research-title">Semantic Search Engine using an Ontology</div>
+    <div class="research-duration">January 2023 - Current</div>
+    <div class="research-tools"><strong>Tools:</strong> Protege, Neo4j, Django, Python, NumPy, Pandas</div>
+    <div class="research-description">
+      Developed a novel ontology for social media influencers to categorize them by audience location, interaction rates, and content types. Current work focuses on refining assumptions from prior research by fine-tuning LLaMA2 and utilizing prompt engineering techniques.
+    </div>
+    <div>
+      <strong>Supervisor:</strong> <a href="https://cse.buet.ac.bd/faculty/faculty_detail/mmasroorali" class="supervisor-link">Dr. Muhammad Masroor Ali</a>
+    </div>
+  </div>
+
+  <div class="ongoing-research-item">
+    <div class="research-title">Online Facility Assignment with Nonuniform Capacities</div>
+    <div class="research-duration">April 2025 - Current</div>
+    <div class="research-tools"><strong>Tools:</strong> Python, Pandas, NumPy, SciPy, Matplotlib</div>
+    <div class="research-description">
+      Investigating the online facility assignment problem with nonuniform facility capacities in metric spaces. Established a reduction from the general setting to the unit-capacity case, simplifying the analysis of greedy algorithms. Derived tighter competitive ratio bounds for algorithms on Euclidean planes and unweighted graphs, extending prior results on uniform capacities.
+    </div>
+    <div>
+      <strong>Supervisor:</strong> <a href="https://cse.buet.ac.bd/faculty/faculty_detail/saidurrahman" class="supervisor-link">Dr. Md. Saidur Rahman</a>
+    </div>
+  </div>
+</div>
+
+<div class="research-section">
+  <h2>📄 Published Papers</h2>
+  
+  <!-- New style rendering if publication categories are defined -->
+  {% if site.publication_category %}
+    {% for category in site.publication_category  %}
+      {% assign title_shown = false %}
+      {% for post in site.publications reversed %}
+        {% if post.category != category[0] %}
+          {% continue %}
+        {% endif %}
+        {% unless title_shown %}
+          <h3>{{ category[1].title }}</h3>
+          {% assign title_shown = true %}
+        {% endunless %}
+        <div class="publication-item">
+          {% include archive-single.html %}
+        </div>
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+  {% else %}
+    {% for post in site.publications reversed %}
+      <div class="publication-item">
+        {% include archive-single.html %}
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>
 
 
 
