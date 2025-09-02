@@ -11,33 +11,11 @@ redirect_from:
 .about-container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0 1.25rem; /* subtle inner padding without affecting layout grid */
 }
 
-/* Fix homepage alignment and spacing issues */
-.page__content {
-  margin: 0 !important;
-  max-width: 100% !important;
-  width: 100% !important;
-}
-
-.page__inner-wrap {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-}
-
-/* Ensure full width utilization */
-#main {
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-article.page {
-  width: 100% !important;
-  margin: 0 !important;
-}
+/* Restore theme defaults for layout containers to prevent overflow and right-side whitespace */
+/* Intentionally do not override .page__content, .page__inner-wrap, #main, or article widths */
 
 .hero-section {
   display: flex;
