@@ -73,19 +73,30 @@ author_profile: true
   font-weight: 500;
 }
 
-.project-image-placeholder {
+.project-image {
   width: 100%;
   height: 200px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.1em;
-  font-weight: 500;
+  overflow: hidden;
   margin-bottom: 1em;
-  border: 2px dashed #bdc3c7;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.project-image:hover img {
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -103,8 +114,8 @@ author_profile: true
 <div class="projects-container">
   
   <div class="project-item">
-    <div class="project-image-placeholder">
-      📊 Project Image Placeholder - BISDP-BI
+    <div class="project-image">
+      <img src="/images/BISDP-BI.png" alt="BISDP-BI Government Insurance Project">
     </div>
     <div class="project-header">
       <h3 class="project-title">BISDP-BI</h3>
@@ -124,8 +135,8 @@ author_profile: true
   </div>
 
   <div class="project-item">
-    <div class="project-image-placeholder">
-      🤖 Project Image Placeholder - Invoice-Factory-AI
+    <div class="project-image">
+      <img src="/images/INVOICE-FACTORY-AI.png" alt="Invoice-Factory-AI Document Processing System">
     </div>
     <div class="project-header">
       <h3 class="project-title">Invoice-Factory-AI</h3>
@@ -144,8 +155,8 @@ author_profile: true
   </div>
 
   <div class="project-item">
-    <div class="project-image-placeholder">
-      👨‍👩‍👧‍👦 Project Image Placeholder - Parental Assistant
+    <div class="project-image">
+      <img src="/images/PARENTAL-ASSISTANT.png" alt="Parental Assistant Multi-Agent AI System">
     </div>
     <div class="project-header">
       <h3 class="project-title">Parental Assistant</h3>
@@ -164,8 +175,8 @@ author_profile: true
   </div>
 
   <div class="project-item">
-    <div class="project-image-placeholder">
-      🎬 Project Image Placeholder - Zeuxis.AI
+    <div class="project-image">
+      <img src="/images/ZEUXIS-AI.png" alt="Zeuxis.AI Multimedia Generation Platform">
     </div>
     <div class="project-header">
       <h3 class="project-title">Zeuxis.AI</h3>
@@ -184,8 +195,8 @@ author_profile: true
   </div>
 
   <div class="project-item">
-    <div class="project-image-placeholder">
-      💼 Project Image Placeholder - Aptitudo
+    <div class="project-image">
+      <img src="/images/APTITUDO-AI.png" alt="Aptitudo AI Interview Assistant">
     </div>
     <div class="project-header">
       <h3 class="project-title">Aptitudo</h3>

@@ -11,6 +11,18 @@ redirect_from:
 .about-container {
   max-width: 100%;
   margin: 0 auto;
+  padding: 0 1em;
+}
+
+/* Fix homepage alignment issues */
+.page__content {
+  margin: 0 auto !important;
+  max-width: 100% !important;
+}
+
+.page__inner-wrap {
+  margin: 0 auto !important;
+  padding: 0 !important;
 }
 
 .hero-section {
