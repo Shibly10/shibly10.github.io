@@ -14,15 +14,29 @@ redirect_from:
   padding: 0 1em;
 }
 
-/* Fix homepage alignment issues */
+/* Fix homepage alignment and spacing issues */
 .page__content {
-  margin: 0 auto !important;
+  margin: 0 !important;
   max-width: 100% !important;
+  width: 100% !important;
 }
 
 .page__inner-wrap {
-  margin: 0 auto !important;
+  margin: 0 !important;
   padding: 0 !important;
+  width: 100% !important;
+}
+
+/* Ensure full width utilization */
+#main {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+article.page {
+  width: 100% !important;
+  margin: 0 !important;
 }
 
 .hero-section {

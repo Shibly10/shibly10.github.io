@@ -83,18 +83,16 @@
   overflow: visible !important;
 }
 
-/* Fix Google Scholar icon specifically */
-.author__urls a[href*="scholar.google"] i:before {
-  content: "\f19d" !important;
-  font-family: "Font Awesome 5 Free" !important;
-  font-weight: 900 !important;
-}
-
-/* Alternative Google Scholar icon fix */
+/* Google Scholar icon - use emoji only */
 .author__urls a[href*="scholar.google"]:before {
   content: "🎓";
   font-size: 1.2em;
   margin-right: 0.5em;
+}
+
+/* Hide FontAwesome icon for Google Scholar to avoid duplicates */
+.author__urls a[href*="scholar.google"] i {
+  display: none;
 }
 
 /* Enhanced button styling */
