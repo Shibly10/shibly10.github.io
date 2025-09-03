@@ -76,7 +76,6 @@
    Author profile and links
    ========================================================================== */
 
-
 .author__avatar {
   display: table-cell;
   vertical-align: top;
@@ -92,11 +91,8 @@
 
   img {
     max-width: 175px;
-    width: 175px;           // Added: Set fixed width
-    height: 175px;          // Added: Set fixed height to match width
-    object-fit: cover;      // Added: Crop image to fit square while maintaining aspect ratio
-    border-radius: 0;       // Changed: Remove rounded corners (was 25%)
-    
+    border-radius: 25%;
+
     @include breakpoint($large) {
       padding: 5px;
       border: 1px solid $border-color;
