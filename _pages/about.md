@@ -286,13 +286,15 @@ redirect_from:
   <div class="research-interests">
     <h3>🔬 Research Interests</h3>
     <ul class="interests-list">
-      <li>🤖 Applied AI across interdisciplinary domains</li>
-      <li>🔤 Natural Language Processing (NLP)</li>
-      <li>📚 Retrieval Augmented Generation (RAG)</li>
-      <li>💻 Human-Computer Interaction (HCI)</li>
+      <li>🤖 Applied AI</li>
+      <li>🧠 LLM</li>
+      <li>🔤 NLP</li>
       <li>💬 Conversational AI</li>
+      <li>📚 RAG</li>
       <li>⚙️ Software Engineering</li>
-      <li>🎯 Hallucination Reduction in AI Agents</li>
+      <li>🎯 Hallucination Reduction</li>
+      <li>💻 HCI</li>
+      <li>🕸️ Ontology and Knowledge Graph</li>
     </ul>
   </div>
 
