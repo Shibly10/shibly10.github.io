@@ -290,6 +290,7 @@ redirect_from:
       <li>🧠 LLM</li>
       <li>🔤 NLP</li>
       <li>💬 Conversational AI</li>
+      <li>🥽 Virtual Reality</li>
       <li>📚 RAG</li>
       <li>⚙️ Software Engineering</li>
       <li>🎯 Hallucination Reduction</li>
