@@ -240,7 +240,7 @@ redirect_from:
     <div class="experience-item">
       <div class="item-header">
         <div class="item-title">Assistant Software Engineer</div>
-        <div class="item-date">July 2024 – February 2025</div>
+        <div class="item-date">July 2023 – February 2025</div>
       </div>
       <div class="item-subtitle">Computer Network Systems, Dhaka, Bangladesh</div>
       <div class="item-details">
