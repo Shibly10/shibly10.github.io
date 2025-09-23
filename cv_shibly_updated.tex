@@ -24,12 +24,12 @@
 \usepackage{hyperref}
 \usepackage{multicol}
 
-% Page setup
+% Page setup - Reduced margins slightly
 \geometry{
-    left=1.2cm,
-    right=1.2cm,
-    top=1.2cm,
-    bottom=1.2cm
+    left=1.0cm,
+    right=1.0cm,
+    top=0.8cm,
+    bottom=0.8cm
 }
 
 % Color scheme
@@ -54,39 +54,43 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Section formatting
+% Section formatting - Reduced spacing
 \titleformat{\section}
 {\normalsize\bfseries\color{primaryblue}}
 {}{0em}
-{}[\vspace{-1pt}\textcolor{primaryblue}{\rule{\textwidth}{1pt}}\vspace{2pt}]
+{}[\vspace{-2pt}\textcolor{primaryblue}{\rule{\textwidth}{0.8pt}}\vspace{0pt}]
+
+\titlespacing*{\section}{0pt}{3pt}{1pt}
 
 \titleformat{\subsection}
 {\small\bfseries\color{secondaryblue}}
 {}{0em}
 {}
 
-% Custom commands for different entry types
+\titlespacing*{\subsection}{0pt}{2pt}{0pt}
+
+% Custom commands for different entry types with reduced spacing
 \newcommand{\cventry}[6]{%
     \begin{tabularx}{\textwidth}{X r}
         \textbf{#1} & \textit{#2} \\
         \textcolor{darkgray}{#3} & \textcolor{darkgray}{#4} \\
     \end{tabularx}
-    \vspace{1pt}
+    \vspace{0pt}
     \ifx&#5&%
     \else
         #5
-        \vspace{2pt}
+        \vspace{0pt}
     \fi
     \ifx&#6&%
     \else
-        \begin{itemize}[leftmargin=10pt, topsep=0pt, itemsep=0pt]
+        \begin{itemize}[leftmargin=10pt, topsep=0pt, itemsep=0pt, parsep=0pt]
             #6
         \end{itemize}
-        \vspace{2pt}
+        \vspace{1pt}
     \fi
 }
 
-% Education entry with CGPA format
+% Education entry with CGPA format - Reduced spacing
 \newcommand{\cveducation}[7]{%
     \textbf{#1} \hfill \textit{#2}\\
     \textit{#3} \hfill #4\\
@@ -103,32 +107,32 @@
     \else
         #7
     \fi
-    \vspace{4pt}
+    \vspace{2pt}
 }
 
-% Ongoing research entry
+% Ongoing research entry - Reduced spacing
 \newcommand{\cvresearch}[6]{%
     \textbf{#1} \hfill \textit{#2}\\
     \textit{Tools: #3} \hfill \href{#5}{[Supervisor]}\\
-    \vspace{1pt}
+    \vspace{0pt}
     #4\\
     \ifx&#6&%
     \else
         #6\\
     \fi
-    \vspace{4pt}
+    \vspace{2pt}
 }
 
 \newcommand{\cvproject}[5]{%
     \textbf{#1} \hfill \textit{#2}\\
     \textit{#3}\\
-    \vspace{1pt}
+    \vspace{0pt}
     #4\\
     \ifx&#5&%
     \else
-        \vspace{1pt}
+        \vspace{0pt}
         \textbf{#5}
-        \vspace{3pt}
+        \vspace{1pt}
     \fi
 }
 
@@ -141,30 +145,31 @@
     #2\\
     #3\\
     Email: \href{mailto:#4}{#4}\\
-    \vspace{2pt}
+    \vspace{0pt}
 }
 
 % Remove default paragraph indentation
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
 
 \begin{document}
 
-% Header section - Following reference image format
+% Header section - Following reference image format with reduced spacing
 \begin{center}
-    {\large\bfseries\color{primaryblue} Md. Abdur Rahman Shibly}\\[6pt]
+    {\large\bfseries\color{primaryblue} Md. Abdur Rahman Shibly}\\[3pt]
     
     \begin{tabular}{c c c}
         \faPhone\ +8801329529115 & 
         \faEnvelope\ \href{mailto:shibly.ar@gmail.com}{shibly.ar@gmail.com} & 
-        \faGlobe\ \href{https://shibly10.github.io/}{shibly10.github.io} \\[2pt]
+        \faGlobe\ \href{https://shibly10.github.io/}{shibly10.github.io} \\[1pt]
         \faLinkedin\ \href{https://bd.linkedin.com/in/md-abdur-rahman-shibly-67b5251b8}{LinkedIn} & 
         \faGithub\ \href{https://github.com/Shibly10}{GitHub} & 
-        \faGraduationCap\ \href{https://scholar.google.com/citations?user=zl_d5jcAAAAJ&hl=en}{Google Scholar} \\[2pt]
+        \faGraduationCap\ \href{https://scholar.google.com/citations?user=zl_d5jcAAAAJ&hl=en}{Google Scholar} \\[1pt]
         \multicolumn{3}{c}{\faMapMarker\ Dhaka, Bangladesh}
     \end{tabular}
 \end{center}
 
-\vspace{4pt}
+\vspace{2pt}
 
 % Education - Following reference format
 \section{Education}
@@ -181,15 +186,18 @@
 % Research Interests
 \section{Research Interests}
 
-\begin{multicols}{2}
-\begin{itemize}[leftmargin=12pt, itemsep=1pt]
-    \item Applied AI across interdisciplinary domains
+\begin{multicols}{3}
+\begin{itemize}[leftmargin=12pt, itemsep=0pt, parsep=0pt, topsep=0pt]
+    \item Applied AI 
+    \item LLM
     \item NLP
-    \item RAG
-    \item HCI
     \item Conversational AI
+    \item Virtual Reality
+    \item RAG
     \item Software Engineering
-    \item Hallucination Reduction in AI Agents
+    \item Hallucination Reduction
+    \item HCI
+    \item Ontology and Knowledge Graph
 \end{itemize}
 \end{multicols}
 
@@ -209,7 +217,7 @@
 {April 2025 - Current}
 {Python, Pandas, NumPy, SciPy, Matplotlib}
 {Investigating the online facility assignment problem with nonuniform facility capacities in metric spaces. Established a reduction from the general setting to the unit-capacity case, simplifying the analysis of greedy algorithms. Derived tighter competitive ratio bounds for algorithms on Euclidean planes and unweighted graphs, extending prior results on uniform capacities.}
-{https://cse.buet.ac.bd/faculty/faculty_detail/saidurrahman}
+{https://www.cs.arizona.edu/person/reyan-ahmed}
 {}
 
 % Publications
@@ -217,13 +225,13 @@
 
 \subsection{Conference Papers}
 
-\begin{enumerate}[leftmargin=12pt]
+\begin{enumerate}[leftmargin=12pt, topsep=0pt, itemsep=0pt, parsep=0pt]
     \cvpublication{Shibly, M. A. R., et al., "Leveraging the Domain Adaptation of Retrieval-Augmented Generation Models for Question Answering," in \textit{Proceedings of the 22nd International Conference on Information Technology – New Generations (ITNG 2025)}, Springer, 2025. \href{https://doi.org/10.1007/978-3-031-89063-5_42}{\textcolor{primaryblue}{DOI}}}
 \end{enumerate}
 
 \subsection{Book Chapters}
 
-\begin{enumerate}[leftmargin=12pt]
+\begin{enumerate}[leftmargin=12pt, topsep=0pt, itemsep=0pt, parsep=0pt]
     \cvpublication{Chapter in Springer Nature book collection based on ITNG 2025 conference proceedings. \href{https://link.springer.com/chapter/10.1007/978-3-031-89063-5_42}{\textcolor{primaryblue}{Link}}}
 \end{enumerate}
 
@@ -248,7 +256,7 @@
 
 \cventry
 {Assistant Software Engineer}
-{July 2024 -- February 2025}
+{July 2023 -- February 2025}
 {Computer Network Systems}
 {Dhaka, Bangladesh}
 {}
@@ -300,7 +308,7 @@
 {Aptitudo}
 {May 2024 -- August 2024}
 {AI Interview Assistant}
-{Created AI-powered interview preparation system generating diverse question types including MCQ, coding, and written questions, with automated scoring capabilities.}
+{Created AI-powered interview preparation system generating diverse question types including MCQ, coding, and written questions, with automated scoring capabilities. \href{https://drive.google.com/file/d/1wSSblaQzrzr2OAD52C-nwiFe4zyxj6Gq/view?usp=sharing}{\textcolor{primaryblue}{[Demo Video]}}}
 {Django, LLM, Prompt Engineering}
 
 % References

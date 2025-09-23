@@ -99,6 +99,37 @@ author_profile: true
   transform: scale(1.05);
 }
 
+.project-demo {
+  margin: 1em 0;
+}
+
+.demo-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6em 1.2em;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+}
+
+.demo-link:hover {
+  background: linear-gradient(135deg, #2980b9, #1f5f8b);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.demo-link i {
+  margin-right: 0.5em;
+  font-size: 1.1em;
+}
+
 @media (max-width: 768px) {
   .project-header {
     flex-direction: column;
@@ -107,6 +138,11 @@ author_profile: true
   
   .project-duration {
     margin-top: 0.5em;
+  }
+  
+  .demo-link {
+    font-size: 0.85em;
+    padding: 0.5em 1em;
   }
 }
 </style>
@@ -205,6 +241,11 @@ author_profile: true
     <div class="project-type">AI Interview Assistant</div>
     <div class="project-description">
       Created AI-powered interview preparation system generating diverse question types including MCQ, coding, and written questions, with automated scoring capabilities.
+    </div>
+    <div class="project-demo">
+      <a href="https://drive.google.com/file/d/1wSSblaQzrzr2OAD52C-nwiFe4zyxj6Gq/view?usp=sharing" target="_blank" class="demo-link">
+        <i class="fas fa-play-circle"></i> Watch Demo Video
+      </a>
     </div>
     <div class="project-technologies">
       <span class="tech-tag">Django</span>
