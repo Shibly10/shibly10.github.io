@@ -287,6 +287,7 @@ redirect_from:
     <h3>🔬 Research Interests</h3>
     <ul class="interests-list">
       <li>🤖 Applied AI</li>
+      <li>🔒 AI Security</li>
       <li>🧠 LLM</li>
       <li>🔤 NLP</li>
       <li>💬 Conversational AI</li>
