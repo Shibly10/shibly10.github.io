@@ -212,7 +212,6 @@ redirect_from:
       </div>
       <div class="item-subtitle">Bangladesh University of Engineering and Technology (BUET)</div>
       <div class="item-details">
-        <div class="cgpa">CGPA: 3.29/4.00</div>
         <p><strong>BSc Thesis:</strong> Building a Semantic Search Engine using an Ontology: A Case Study on Social Media Influencers</p>
       </div>
     </div>
