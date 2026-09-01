@@ -10,3 +10,14 @@ Gemfile.lock
 # Ingore files created by npm
 node_modules
 package-lock.json
+
+# Application working files. This repo is published publicly at
+# shibly10.github.io, so anything committed here is downloadable by anyone.
+# These are private drafts (a proposal note, an unsigned letter in an advisor's
+# name, a pending allocation request) — delete a line if you decide to publish
+# that file deliberately.
+CLARA_Note_FairCopy_Short.docx
+AutoDIDACTS_Note*.docx
+ACCESS_Doctoral_Advisor_Letter*.docx
+ACCESS_Explore_Project_Description.md
+ACCESS_Explore_Project_Description.pdf

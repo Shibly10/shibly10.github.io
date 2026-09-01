@@ -275,7 +275,10 @@ redirect_from:
   <div class="hero-section">
     <div class="hero-text">
       <div class="intro-text">
-        I'm <strong>Shibly</strong>, a Software Engineer at <a href="https://www.bengalmobileqa.com/" target="_blank">Bengal Mobile QA Solution</a> with a passion for continuous learning and growth. I'm highly motivated and always set ambitious goals, working diligently to achieve them. I thrive in collaborative environments and am willing to push beyond my limits to accomplish meaningful work.
+        I'm <strong>Shibly</strong>, a PhD student and Graduate Teaching Assistant in the <a href="https://www.cise.ufl.edu/" target="_blank">Department of Computer &amp; Information Science &amp; Engineering</a> at the University of Florida, advised by <a href="https://sumitkumarjha.com/" target="_blank">Prof. Sumit Kumar Jha</a>.
+      </div>
+      <div class="intro-text">
+        My research asks how the reasoning of a large language model can be <em>checked</em> rather than trusted. I'm interested in whether a model's stated chain of reasoning is really the computation that produced its answer, and in building systems whose intermediate steps are small and legible enough for a person to read — treating faithfulness and explainability as things to be measured, not asserted. Before starting my PhD I spent several years building applied LLM and RAG systems in industry.
       </div>
     </div>
     <div class="hero-image">
@@ -286,17 +289,17 @@ redirect_from:
   <div class="research-interests">
     <h3>🔬 Research Interests</h3>
     <ul class="interests-list">
-      <li>🤖 Applied AI</li>
-      <li>🔒 AI Security</li>
-      <li>🧠 LLM</li>
-      <li>🔤 NLP</li>
-      <li>💬 Conversational AI</li>
-      <li>🥽 Virtual Reality</li>
-      <li>📚 RAG</li>
-      <li>⚙️ Software Engineering</li>
+      <li>🔍 Explainable AI</li>
+      <li>🧩 AI Reasoning</li>
       <li>🎯 Hallucination Reduction</li>
-      <li>💻 HCI</li>
+      <li>⚖️ Neurosymbolic AI</li>
+      <li>🧠 Large Language Models</li>
+      <li>📚 RAG</li>
+      <li>🔤 NLP</li>
+      <li>🔒 AI Security</li>
       <li>🕸️ Ontology and Knowledge Graph</li>
+      <li>💬 Conversational AI</li>
+      <li>💻 HCI</li>
     </ul>
   </div>
 
@@ -337,12 +340,26 @@ redirect_from:
   </div>
 
   <div class="experience-section">
-    <h2>💼 Professional Experience</h2>
+    <h2>💼 Experience</h2>
+
+    <div class="job-item">
+      <div class="job-header">
+        <h3 class="job-title">Graduate Teaching Assistant</h3>
+        <span class="job-duration">August 2026 - Present</span>
+      </div>
+      <div class="job-company">University of Florida — Computer &amp; Information Science &amp; Engineering</div>
+      <div class="job-description">
+        <ul>
+          <li>Teaching assistant in the CISE department alongside doctoral research</li>
+          <li>Doctoral research on verifiable and explainable reasoning in large language models, advised by Prof. Sumit Kumar Jha</li>
+        </ul>
+      </div>
+    </div>
 
     <div class="job-item">
       <div class="job-header">
         <h3 class="job-title">Software Engineer</h3>
-        <span class="job-duration">March 2025 - Present</span>
+        <span class="job-duration">March 2025 - July 2026</span>
       </div>
       <div class="job-company">Bengal Mobile QA Solutions</div>
       <div class="job-description">
@@ -358,7 +375,7 @@ redirect_from:
     <div class="job-item">
       <div class="job-header">
         <h3 class="job-title">Assistant Software Engineer</h3>
-        <span class="job-duration">July 2024 - February 2025</span>
+        <span class="job-duration">July 2023 - February 2025</span>
       </div>
       <div class="job-company">Computer Network Systems</div>
       <div class="job-description">

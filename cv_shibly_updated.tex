@@ -110,12 +110,33 @@
     \vspace{2pt}
 }
 
-% Ongoing research entry - Reduced spacing
+% Doctoral education entry - advisor and research area in place of a thesis title
+\newcommand{\cvdoctoral}[6]{%
+    \textbf{#1} \hfill \textit{#2}\\
+    \textit{#3} \hfill #4\\
+    \ifx&#5&%
+    \else
+        \textcolor{darkgray}{\textbf{Advisor:} #5}\\
+    \fi
+    \ifx&#6&%
+    \else
+        \textcolor{darkgray}{\textbf{Research Area:} #6}\\
+    \fi
+    \vspace{2pt}
+}
+
+% Research entry - Reduced spacing.
+% #5 is supervisor *content*, not a bare URL, so an entry can carry more than
+% one supervisor. It sits on its own line to avoid colliding with the tools list.
 \newcommand{\cvresearch}[6]{%
     \textbf{#1} \hfill \textit{#2}\\
-    \textit{Tools: #3} \hfill \href{#5}{[Supervisor]}\\
+    \textit{Tools: #3}\\
     \vspace{0pt}
     #4\\
+    \ifx&#5&%
+    \else
+        \textcolor{darkgray}{#5}\\
+    \fi
     \ifx&#6&%
     \else
         #6\\
@@ -140,11 +161,15 @@
     \item #1
 }
 
-\newcommand{\cvreference}[5]{%
+% Reference entry. Takes 6 arguments: the sixth (relationship) was previously
+% passed by every call site but not declared, so it fell through the macro and
+% typeset as unstyled body text.
+\newcommand{\cvreference}[6]{%
     \textbf{\href{#5}{#1}}\\
     #2\\
     #3\\
-    Email: \href{mailto:#4}{#4}\\
+    \href{mailto:#4}{#4}\\
+    \textcolor{darkgray}{\textit{#6}}\\
     \vspace{0pt}
 }
 
@@ -158,14 +183,15 @@
 \begin{center}
     {\large\bfseries\color{primaryblue} Md. Abdur Rahman Shibly}\\[3pt]
     
+    {\small PhD Student, Computer \& Information Science \& Engineering, University of Florida}\\[3pt]
     \begin{tabular}{c c c}
-        \faPhone\ +8801329529115 & 
-        \faEnvelope\ \href{mailto:shibly.ar@gmail.com}{shibly.ar@gmail.com} & 
+        \faEnvelope\ \href{mailto:md.shibly@ufl.edu}{md.shibly@ufl.edu} &
+        \faEnvelope\ \href{mailto:shibly.ar@gmail.com}{shibly.ar@gmail.com} &
         \faGlobe\ \href{https://shibly10.github.io/}{shibly10.github.io} \\[1pt]
-        \faLinkedin\ \href{https://bd.linkedin.com/in/md-abdur-rahman-shibly-67b5251b8}{LinkedIn} & 
-        \faGithub\ \href{https://github.com/Shibly10}{GitHub} & 
+        \faLinkedin\ \href{https://bd.linkedin.com/in/md-abdur-rahman-shibly-67b5251b8}{LinkedIn} &
+        \faGithub\ \href{https://github.com/Shibly10}{GitHub} &
         \faGraduationCap\ \href{https://scholar.google.com/citations?user=zl_d5jcAAAAJ&hl=en}{Google Scholar} \\[1pt]
-        \multicolumn{3}{c}{\faMapMarker\ Dhaka, Bangladesh}
+        \multicolumn{3}{c}{\faPhone\ +1 352 219 6417 \quad \faMapMarker\ Gainesville, FL, USA}
     \end{tabular}
 \end{center}
 
@@ -174,12 +200,20 @@
 % Education - Following reference format
 \section{Education}
 
+\cvdoctoral
+{University of Florida}
+{August 2026 -- Present}
+{\textbf{Doctor of Philosophy}, Computer \& Information Science \& Engineering}
+{Gainesville, FL, USA}
+{Prof. Sumit Kumar Jha}
+{Verifiable and explainable reasoning in large language models}
+
 \cveducation
 {Bangladesh University of Engineering and Technology (BUET)}
 {March 2018 -- May 2023}
 {\textbf{Bachelor of Science}}
 {}
-{3.29 / 4.00 }
+{}
 {Building a Semantic Search Engine using an Ontology: A Case Study on Social Media Influencers.}
 {}
 
@@ -188,33 +222,37 @@
 
 \begin{multicols}{3}
 \begin{itemize}[leftmargin=12pt, itemsep=0pt, parsep=0pt, topsep=0pt]
-    \item Applied AI 
-    \item AI Security
-    \item LLM
+    \item Explainable AI
+    \item AI Reasoning
+    \item Hallucination Reduction
+    \item Neurosymbolic AI
+    \item Large Language Models
+    \item RAG
     \item NLP
-    \item Conversational AI
-    \item Virtual Reality
+    \item AI Security
     \item Ontology and Knowledge Graph
+    \item Conversational AI
+    \item HCI
 \end{itemize}
 \end{multicols}
 
-% Ongoing Research - Following reference format
-\section{Ongoing Research}
-
-\cvresearch
-{Semantic Search Engine using an Ontology}
-{January 2023 - Current}
-{Protege, Neo4j, Django, Python, NumPy, Pandas}
-{Developed a novel ontology for social media influencers to categorize them by audience location, interaction rates, and content types. Current work focuses on refining assumptions from prior research by fine-tuning LLaMA2 and utilizing prompt engineering techniques.}
-{https://cse.buet.ac.bd/faculty/faculty_detail/mmasroorali}
-{}
+% Research Experience - Following reference format
+\section{Research Experience}
 
 \cvresearch
 {Online Facility Assignment with Nonuniform Capacities}
-{April 2025 - Current}
+{April 2025 -- Present}
 {Python, Pandas, NumPy, SciPy, Matplotlib}
-{Investigating the online facility assignment problem with nonuniform facility capacities in metric spaces. Established a reduction from the general setting to the unit-capacity case, simplifying the analysis of greedy algorithms. Derived tighter competitive ratio bounds for algorithms on Euclidean planes and unweighted graphs, extending prior results on uniform capacities.}
-{https://www.cs.arizona.edu/person/reyan-ahmed}
+{Investigated the online facility assignment problem with nonuniform facility capacities in metric spaces. Established a reduction from the general setting to the unit-capacity case, simplifying the analysis of greedy algorithms. Derived tighter competitive ratio bounds for algorithms on Euclidean planes and unweighted graphs, extending prior results on uniform capacities. Manuscript under review.}
+{Supervisors: \href{https://www.cs.arizona.edu/person/reyan-ahmed}{Dr. Reyan Ahmed}, \href{https://cse.buet.ac.bd/faculty/faculty_detail/saidurrahman}{Dr. Md. Saidur Rahman}}
+{}
+
+\cvresearch
+{Semantic Search Engine using an Ontology}
+{January 2023 -- 2025}
+{Protege, Neo4j, Django, Python, NumPy, Pandas}
+{Developed a novel ontology for social media influencers to categorize them by audience location, interaction rates, and content types. Later work refined assumptions from the original study by fine-tuning LLaMA2 and applying prompt engineering techniques.}
+{Supervisor: \href{https://cse.buet.ac.bd/faculty/faculty_detail/mmasroorali}{Dr. Muhammad Masroor Ali}}
 {}
 
 % Publications
@@ -226,23 +264,25 @@
     \cvpublication{Shibly, M. A. R., et al., "Leveraging the Domain Adaptation of Retrieval-Augmented Generation Models for Question Answering," in \textit{Proceedings of the 22nd International Conference on Information Technology – New Generations (ITNG 2025)}, Springer, 2025. \href{https://doi.org/10.1007/978-3-031-89063-5_42}{\textcolor{primaryblue}{DOI}}}
 \end{enumerate}
 
-\subsection{Book Chapters}
-
-\begin{enumerate}[leftmargin=12pt, topsep=0pt, itemsep=0pt, parsep=0pt]
-    \cvpublication{Chapter in Springer Nature book collection based on ITNG 2025 conference proceedings. \href{https://link.springer.com/chapter/10.1007/978-3-031-89063-5_42}{\textcolor{primaryblue}{Link}}}
-\end{enumerate}
-
 % Test Scores
 \section{Test Scores}
 
 \textbf{IELTS} (August 2025): Overall Band \textbf{8.0} (Reading: 9, Listening: 8, Speaking: 8, Writing: 6.5)
 
 % Work Experience
-\section{Professional Experience}
+\section{Experience}
+
+\cventry
+{Graduate Teaching Assistant}
+{August 2026 -- Present}
+{University of Florida}
+{Gainesville, FL, USA}
+{}
+{\item Teaching assistant in the Department of Computer \& Information Science \& Engineering alongside doctoral research}
 
 \cventry
 {Software Engineer}
-{March 2025 -- Present}
+{March 2025 -- July 2026}
 {Bengal Mobile QA Solutions}
 {Dhaka, Bangladesh}
 {}
@@ -288,10 +328,10 @@
 {Django, LLM, Prompt Engineering, Google Document AI}
 
 \cvproject
-{Parental Assistant}
+{Multi-Agent Conversational AI System}
 {August 2025 -- Present}
 {Multi-Agent AI System}
-{Building comprehensive AI assistant for parents to help monitor and support their children using advanced multi-agent system architecture.}
+{Building comprehensive AI assistant for hotel guests, enabling coordinated task handling, service assistance, and reliable information retrieval through agent orchestration and tool-integrated workflows.}
 {Langgraph, Langchain, Langfuse, Multi-agent Systems}
 
 \cvproject
@@ -311,17 +351,27 @@
 % References
 \section{References}
 
-\begin{minipage}[t]{0.48\textwidth}
+\begin{minipage}[t]{0.31\textwidth}
+    \cvreference
+    {Dr. Sumit Kumar Jha}
+    {Professor, Computer \& Information Science \& Engineering}
+    {University of Florida}
+    {sumit.jha@ufl.edu}
+    {https://sumitkumarjha.com/}
+    {Relationship: Doctoral Advisor}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.31\textwidth}
     \cvreference
     {Dr. Muhammad Masroor Ali}
     {Professor, Computer Science \& Engineering}
     {Bangladesh University of Engineering and Technology}
     {mmasroorali@cse.buet.ac.bd}
     {https://cse.buet.ac.bd/faculty/faculty_detail/mmasroorali}
-    {Relationship: Thesis Advisor}
+    {Relationship: BSc Thesis Advisor}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.48\textwidth}
+\begin{minipage}[t]{0.31\textwidth}
     \cvreference
     {Dr. Md. Mostofa Akbar}
     {Professor, Computer Science \& Engineering}

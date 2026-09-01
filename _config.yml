@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Shibly's Homepage"
 title_separator          : "-"
 name                     : &name "Md. Abdur Rahman Shibly"
-description              : &description "Software Engineer & Aspiring Researcher specializing in AI, NLP, and RAG systems"
+description              : &description "PhD student at the University of Florida working on verifiable and explainable reasoning in large language models"
 url                      : https://shibly10.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
@@ -24,11 +24,11 @@ author:
   avatar           : "dm.jpg"
   name             : "Md. Abdur Rahman Shibly"
   pronouns         : # example: "she/her"  
-  bio              : "Software Engineer & Aspiring Researcher"
-  location         : "Dhaka, Bangladesh"
-  employer         : "Bangladesh University of Engineering and Technology"
+  bio              : "PhD Student & Graduate Teaching Assistant, CISE, University of Florida"
+  location         : "Gainesville, FL"
+  employer         : "University of Florida"
   uri              : # URL
-  email            : "shibly.ar@gmail.com" 
+  email            : "md.shibly@ufl.edu"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile

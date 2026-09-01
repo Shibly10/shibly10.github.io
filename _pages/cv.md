@@ -192,7 +192,7 @@ redirect_from:
 <div class="cv-container">
   <div class="cv-header">
     <h1>Md. Abdur Rahman Shibly</h1>
-    <p>Software Engineer & Aspiring Researcher</p>
+    <p>PhD Student & Graduate Teaching Assistant — CISE, University of Florida</p>
     <div class="download-section">
       <a href="/files/resume.pdf" class="download-btn" target="_blank">
         📄 Download PDF CV
@@ -207,6 +207,17 @@ redirect_from:
     <h2>🎓 Education</h2>
     <div class="education-item">
       <div class="item-header">
+        <div class="item-title">Doctor of Philosophy in Computer Science</div>
+        <div class="item-date">August 2026 – Present</div>
+      </div>
+      <div class="item-subtitle">University of Florida — Computer &amp; Information Science &amp; Engineering</div>
+      <div class="item-details">
+        <p><strong>Advisor:</strong> Prof. Sumit Kumar Jha</p>
+        <p><strong>Research area:</strong> Verifiable and explainable reasoning in large language models</p>
+      </div>
+    </div>
+    <div class="education-item">
+      <div class="item-header">
         <div class="item-title">Bachelor of Science in Computer Science and Engineering</div>
         <div class="item-date">March 2018 – May 2023</div>
       </div>
@@ -218,12 +229,25 @@ redirect_from:
   </div>
 
   <div class="cv-section">
-    <h2>💼 Professional Experience</h2>
+    <h2>💼 Experience</h2>
+    
+    <div class="experience-item">
+      <div class="item-header">
+        <div class="item-title">Graduate Teaching Assistant</div>
+        <div class="item-date">August 2026 – Present</div>
+      </div>
+      <div class="item-subtitle">University of Florida, Gainesville, FL</div>
+      <div class="item-details">
+        <ul>
+          <li>Teaching assistant in the CISE department alongside doctoral research</li>
+        </ul>
+      </div>
+    </div>
     
     <div class="experience-item">
       <div class="item-header">
         <div class="item-title">Software Engineer</div>
-        <div class="item-date">March 2025 – Present</div>
+        <div class="item-date">March 2025 – July 2026</div>
       </div>
       <div class="item-subtitle">Bengal Mobile QA Solutions, Dhaka, Bangladesh</div>
       <div class="item-details">
